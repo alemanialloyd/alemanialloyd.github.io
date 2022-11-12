@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <title>Home</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="https://scrollmagic.io/assets/css/normalize.css" type="text/css">
+      <link href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css' rel='stylesheet'/>
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js' type='text/javascript'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js" type='text/javascript'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" type='text/javascript'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js" type='text/javascript'></script>
+    <script type="text/javascript" src="https://scrollmagic.io/assets/js/lib/greensock/plugins/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <style type="text/css">
+      :root {
+    --primary-color: #1db954;
+    --primary-gray-color: #ececec;
+    --primary-text-color: #333;
+    --secondary-text-color: #8a8a8a;
+      }
+
+body, html {
+    font: normal 16px 'Roboto', sans-serif;
+}
+
+body {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1033%26quot%3b)' fill='none'%3e%3cpath d='M0 0L97.61 0L0 127.78z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 127.78L97.61 0L453.59000000000003 0L0 291.55z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 291.55L453.59000000000003 0L467.14000000000004 0L0 407.93z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 407.93L467.14000000000004 0L1022.1300000000001 0L0 508.27z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1440 560L1418.45 560L1440 343.03z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1440 343.03L1418.45 560L894.4100000000001 560L1440 168.93999999999997z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1440 168.94L894.4100000000001 560L410.4500000000001 560L1440 154.13z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1440 154.13L410.45000000000005 560L258.82000000000005 560L1440 81.03z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1033'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-attachment: fixed;
+}
+
+section {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+}
+      nav.nav-extended {
+    min-height: 84px;
+    padding: 0 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+    background-color: transparent!important;
+    box-shadow: none;
+    position: fixed;
+    z-index: 999;
+}
+
+.nav-wrapper ul li a {
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+    line-height: initial;
+    padding: 0.5rem 0;
+    margin: 1.5rem 1rem;
+}
+
+nav ul a:hover, nav ul a.active {
+  background-color: transparent;
+    color: var(--primary-color);
+}
+
+nav ul a#anchor2.active:hover, nav ul a#anchor2.active {
+    color: white;
+  background-color: transparent;
+}
+
+      .panel {
+        text-align: center;
+      }
+
+      .valign-wrapper {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+      }
+
+      h2 {
+        margin: 0 0 0;
+        font-size: 3.6rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .panel p {
+        text-align: center;
+        margin: 1rem 0 1rem;
+      }
+
+      .panel ul {
+        margin: 0 0 2rem;
+      }
+
+      .panel ul li {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 3px;
+        margin: 0 5px;
+        background-color:  var(--primary-gray-color);
+        color: var(--secondary-text-color);
+        transition: all 200ms ease-in-out;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      .panel ul li:hover {
+        color: white;
+        background-color: var(--primary-color);
+      }
+
+      .panel .valign-wrapper {
+        left: 0;
+        right: 0;
+      }
+
+      .me h2 {
+        font-size: 5rem;
+        text-align: left;
+      }
+
+      .me h2, .me p {
+        text-align: left;
+      }
+
+      #socmed {
+        margin: 3rem 0 0;
+      }
+
+      #socmed li {
+        display: inline-block;
+      }
+
+      #socmed li a {
+        border-radius: 3px;
+        background-color:  var(--primary-gray-color);
+        color: var(--secondary-text-color);
+        margin: 0 0.5rem 0 0;
+        padding: 12px 12px 8px;
+        transition: all 200ms ease-in-out;
+      }
+
+      #socmed li a:hover {
+        background-color:  var(--primary-color);
+        color: white;
+      }
+
+      .images {
+        margin: 2rem 0 0;
+      }
+
+      .images img {
+        margin: 0 auto;
+        border-radius: 20px;
+        cursor: pointer;
+        box-shadow: 0 5px 10px rgb(209 221 243 / 40%);
+        width: 70%;
+      }
+
+      @media only screen and (max-width: 768px) {
+      .images img {
+        height: 500px;
+        width: auto;
+      }
+}
+
+.logo {
+  margin: 2rem 0 0;
+}
+
+.brankolei {
+  background-color: var(--primary-color);
+}
+
+.brankolei h2, .brankolei p, .perins h2, .perins p, .palabit h2, .palabit p, .essentials h2, .essentials p {
+  color: white;
+}
+
+.brankolei ul li {
+  background-color: #f80302;
+  color: white;
+}
+
+.perins {
+  background-color: #1f1f37;
+}
+
+.perins .images img {
+  box-shadow: 0 5px 10px rgb(18 18 30);
+}
+
+.perins ul li, .palabit ul li, .essentials ul li {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.brankolei ul li:hover, .perins ul li:hover, .palabit ul li:hover, .essentials ul li:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.palabit {
+  background-color: #f60;
+}
+
+.essentials {
+  background-color: #39a9fd;
+}
+
+.form {
+  padding: 3rem;
+  background-color: white;
+        box-shadow: 0 5px 10px rgb(209 221 243 / 40%);
+        text-align: left;
+}
+
+.contact:after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: var(--primary-color);
+  height: 350px;
+  width: 100%;
+  z-index: -1;
+}
+
+.contact h4 {
+  margin: 0 0 3rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+ul.info li {
+  display: block;
+  background-color: transparent;
+  text-align: left;
+  margin: 1rem 0 0;
+}
+
+ul.info li:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+ul.info li ion-icon {
+  color: var(--primary-color);
+  margin: 0 2rem 0 0;
+}
+
+.form button {
+  height: 4rem;
+    border-radius: 15px;
+    margin: 2rem 0 0;
+    background-color: var(--primary-color);
+}
+
+.form button:hover, .form button:focus {
+    background-color: var(--primary-color);
+}
+
+.form form {
+  margin: 0!important;
+}
+
+.credits {
+  margin: 2rem 0 0;
+}
+
+.credits ul {
+  text-align: left;
+}
+
+.credits ul li {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.credits ul li a {
+  border: 1px solid white;
+  color: white!important;
+  background-color: var(--primary-color)!important;
+}
+
+.credits ul li a:hover {
+  border: 1px solid white;
+  color: var(--primary-color)!important;
+  background-color: white!important;
+}
+
+.credits p {
+  margin: 2rem 0 0;
+  color: white;
+  line-height: 42px;
+}
+    </style>
+  </head>
+  <body>
+    <nav class='nav-extended'>
+      <div class='container'>
+          <div class='nav-wrapper row'>
+              <ul class="right">
+                <li><a href='#projects' id="anchor1">Projects</a></li>
+                <li><a href='#contact' id="anchor2">Get in Touch</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+<div class='side-nav' id='sideMenu'>
+  <div class='row'>
+      <div class='col s12'>
+          <h2><ion-icon name="logo-web-component"></ion-icon></h2>
+          <h5>WEBSITE TITLE</h5>
+
+          <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./documents.html">Documents</a></li>
+              <li><a href="./forum.html">Forum</a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+    <div id="pinContainer">
+      <section class="me">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="valign-wrapper">
+                <div class="me-container reveal">
+                  <h2>Lloyd<br/>Alemania</h2>
+                  <p>Developer.</p>
+                  <ul id="socmed">
+                    <li><a href="https://www.facebook.com/alemanialloyd" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="https://www.twitter.com/alemanialloyd" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a href="https://www.linkedin.com/in/alemanialloyd" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="panel works" id="projects">
+            <div class="valign-wrapper">
+              <div class="works-container reveal">
+                <h2>Projects</h2>
+                <p>2019-2022</p>
+        </div>
+      </div>
+      </section>
+     
+      <section class="panel ermrs">
+        <div class="valign-wrapper">
+          <div class="perins-container reveal">
+            <img src="./assets/img/no_logo.png" width="100px" class="logo">
+            <h2>eRMRs</h2>
+            <p>Electronic Recording, Monitoring and Reporting System<br/><br/>09.12.2022</p>
+            <ul>
+              <li>Android Studio</li>
+              <li>Java</li>
+              <li>Firebase</li>
+              <li>Push Notification</li>
+            </ul>
+            <div class="images">
+              <div><img src="./assets/img/ermrs/1.png"></div>
+              <div><img src="./assets/img/ermrs/2.png"></div>
+              <div><img src="./assets/img/ermrs/3.png"></div>
+              <div><img src="./assets/img/ermrs/4.png"></div>
+              <div><img src="./assets/img/ermrs/5.png"></div>
+              <div><img src="./assets/img/ermrs/6.png"></div>
+              <div><img src="./assets/img/ermrs/7.png"></div>
+              <div><img src="./assets/img/ermrs/8.png"></div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel perins">
+        <div class="valign-wrapper">
+          <div class="perins-container reveal">
+            <img src="./assets/img/perins.png" width="100px" class="logo">
+            <h2>Perins</h2>
+            <p>08.15.2022</p>
+            <ul>
+              <li>Android Studio</li>
+              <li>Java</li>
+              <li>Firebase</li>
+              <li>Apache POI</li>
+            </ul>
+            <div class="images">
+            <div><img src="./assets/img/perins/1.jpg"></div>
+            <div><img src="./assets/img/perins/2.jpg"></div>
+            <div><img src="./assets/img/perins/3.jpg"></div>
+            <div><img src="./assets/img/perins/4.jpg"></div>
+            <div><img src="./assets/img/perins/5.jpg"></div>
+            <div><img src="./assets/img/perins/6.jpg"></div>
+            <div><img src="./assets/img/perins/7.jpg"></div>
+            <div><img src="./assets/img/perins/8.jpg"></div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel apims">
+        <div class="valign-wrapper">
+          <div class="perins-container reveal">
+            <img src="./assets/img/apims.png" width="100px" class="logo">
+            <h2>APIMS</h2>
+            <p>Automated Personnel Information Management System<br/><br/>05.22.2022</p>
+            <ul>
+              <li>Android Studio</li>
+              <li>Java</li>
+              <li>Firebase</li>
+              <li>Apache POI</li>
+            </ul>
+            <div class="images">
+              <div><img src="./assets/img/apims/1.png"></div>
+              <div><img src="./assets/img/apims/2.png"></div>
+              <div><img src="./assets/img/apims/3.png"></div>
+              <div><img src="./assets/img/apims/4.png"></div>
+              <div><img src="./assets/img/apims/5.png"></div>
+              <div><img src="./assets/img/apims/6.png"></div>
+              <div><img src="./assets/img/apims/7.png"></div>
+              <div><img src="./assets/img/apims/8.png"></div>
+              <div><img src="./assets/img/apims/9.png"></div>
+              <div><img src="./assets/img/apims/10.png"></div>
+              <div><img src="./assets/img/apims/11.png"></div>
+              <div><img src="./assets/img/apims/12.png"></div>
+              <div><img src="./assets/img/apims/13.png"></div>
+              <div><img src="./assets/img/apims/14.png"></div>
+              <div><img src="./assets/img/apims/15.png"></div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel brankolei">
+          <div class="valign-wrapper">
+          <div class="brankolei-container reveal">
+            <img src="./assets/img/brankolei.png" width="100px" class="logo">
+            <h2>Brankolei Italian Vero Pizza</h2>
+            <p>03.30.2021</p>
+            <ul>
+              <li>Android Studio</li>
+              <li>Java</li>
+              <li>Firebase</li>
+              <li>Cloud Messaging</li>
+              <li>Push Notification</li>
+              <li>Direction API</li>
+              <li>OTP</li>
+            </ul>
+            <div class="images">
+            <div><img src="./assets/img/brankolei/1.png"></div>
+            <div><img src="./assets/img/brankolei/2.png"></div>
+            <div><img src="./assets/img/brankolei/3.png"></div>
+            <div><img src="./assets/img/brankolei/4.png"></div>
+            <div><img src="./assets/img/brankolei/5.png"></div>
+            <div><img src="./assets/img/brankolei/6.png"></div>
+            <div><img src="./assets/img/brankolei/7.png"></div>
+            <div><img src="./assets/img/brankolei/8.png"></div>
+            <div><img src="./assets/img/brankolei/9.png"></div>
+            <div><img src="./assets/img/brankolei/10.png"></div>
+            <div><img src="./assets/img/brankolei/11.png"></div>
+          </div>
+            </div>
+          </div>
+      </section>
+
+      <section class="panel admin">
+        <div class="valign-wrapper">
+        <div class="brankolei-container reveal">
+          <img src="./assets/img/brankolei.png" width="100px" class="logo">
+          <h2>Brankolei Admin</h2>
+          <p>03.30.2021</p>
+          <ul>
+            <li>Android Studio</li>
+            <li>Java</li>
+            <li>Firebase</li>
+            <li>Cloud Messaging</li>
+            <li>Push Notification</li>
+          </ul>
+          <div class="images">
+          <div><img src="./assets/img/branko_admin/1.png"></div>
+          <div><img src="./assets/img/branko_admin/2.png"></div>
+          <div><img src="./assets/img/branko_admin/3.png"></div>
+          <div><img src="./assets/img/branko_admin/4.png"></div>
+          <div><img src="./assets/img/branko_admin/5.png"></div>
+          <div><img src="./assets/img/branko_admin/6.png"></div>
+          <div><img src="./assets/img/branko_admin/7.png"></div>
+          <div><img src="./assets/img/branko_admin/8.png"></div>
+          <div><img src="./assets/img/branko_admin/9.png"></div>
+          <div><img src="./assets/img/branko_admin/10.png"></div>
+          <div><img src="./assets/img/branko_admin/11.png"></div>
+          <div><img src="./assets/img/branko_admin/12.png"></div>
+        </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="panel emapped">
+      <div class="valign-wrapper">
+      <div class="brankolei-container reveal">
+        <img src="./assets/img/e_mapped.png" width="100px" class="logo">
+        <h2>ALS e-MappEd</h2>
+        <p>Alternative Learning System Electronic Means for Advance and Productive Process and Access to Education<br/><br/>10.15.2020</p>
+        <ul>
+          <li>Android Studio</li>
+          <li>Java</li>
+          <li>Firebase</li>
+          <li>Push Notification</li>
+          <li>Apache POI</li>
+          <li>AnyChart</li>
+        </ul>
+        <div class="images">
+          <div><img src="./assets/img/emapped/18.png"></div>
+          <div><img src="./assets/img/emapped/19.png"></div>
+          <div><img src="./assets/img/emapped/20.png"></div>
+          <div><img src="./assets/img/emapped/21.png"></div>
+          <div><img src="./assets/img/emapped/22.png"></div>
+          <div><img src="./assets/img/emapped/23.png"></div>
+          <div><img src="./assets/img/emapped/24.png"></div>
+          <div><img src="./assets/img/emapped/25.png"></div>
+          <div><img src="./assets/img/emapped/26.png"></div>
+          <div><img src="./assets/img/emapped/27.png"></div>
+          <div><img src="./assets/img/emapped/28.png"></div>
+          <div><img src="./assets/img/emapped/1.png"></div>
+          <div><img src="./assets/img/emapped/2.png"></div>
+          <div><img src="./assets/img/emapped/3.png"></div>
+          <div><img src="./assets/img/emapped/4.png"></div>
+          <div><img src="./assets/img/emapped/5.png"></div>
+          <div><img src="./assets/img/emapped/6.png"></div>
+          <div><img src="./assets/img/emapped/7.png"></div>
+          <div><img src="./assets/img/emapped/8.png"></div>
+          <div><img src="./assets/img/emapped/9.png"></div>
+          <div><img src="./assets/img/emapped/10.png"></div>
+          <div><img src="./assets/img/emapped/11.png"></div>
+          <div><img src="./assets/img/emapped/12.png"></div>
+          <div><img src="./assets/img/emapped/13.png"></div>
+          <div><img src="./assets/img/emapped/14.png"></div>
+          <div><img src="./assets/img/emapped/15.png"></div>
+          <div><img src="./assets/img/emapped/16.png"></div>
+          <div><img src="./assets/img/emapped/17.png"></div>
+        </div>
+        </div>
+      </div>
+  </section>
+
+      <section class="panel palabit">
+          <div class="valign-wrapper">
+          <div class="palabit-container reveal">
+            <img src="./assets/img/palabit.png" width="100px" class="logo">
+            <h2>Palabit Delivery</h2>
+            <p>06.11.2020</p>
+            <ul>
+              <li>Android Studio</li>
+              <li>Java</li>
+              <li>Firebase</li>
+              <li>Push Notification</li>
+              <li>Direction API</li>
+              <li>Place API</li>
+              <li>OTP</li>
+            </ul>
+            <div class="images">
+              <div><img src="./assets/img/palabit/1.png"></div>
+              <div><img src="./assets/img/palabit/2.png"></div>
+              <div><img src="./assets/img/palabit/3.png"></div>
+              <div><img src="./assets/img/palabit/4.png"></div>
+              <div><img src="./assets/img/palabit/5.png"></div>
+              <div><img src="./assets/img/palabit/6.png"></div>
+              <div><img src="./assets/img/palabit/7.png"></div>
+              <div><img src="./assets/img/palabit/8.png"></div>
+              <div><img src="./assets/img/palabit/9.png"></div>
+              <div><img src="./assets/img/palabit/10.png"></div>
+              <div><img src="./assets/img/palabit/11.png"></div>
+              <div><img src="./assets/img/palabit/12.png"></div>
+              <div><img src="./assets/img/palabit/13.png"></div>
+              <div><img src="./assets/img/palabit/14.png"></div>
+              <div><img src="./assets/img/palabit/15.png"></div>
+              <div><img src="./assets/img/palabit/16.png"></div>
+              <div><img src="./assets/img/palabit/17.png"></div>
+              <div><img src="./assets/img/palabit/18.png"></div>
+              <div><img src="./assets/img/palabit/19.png"></div>
+          </div>
+            </div>
+          </div>
+      </section>
+
+
+      <section class="panel exclusave">
+        <div class="valign-wrapper">
+        <div class="palabit-container reveal">
+          <img src="./assets/img/exclusave.png" width="100px" class="logo">
+          <h2>ExcluSave</h2>
+          <p>01.14.2019</p>
+          <ul>
+            <li>Android Studio</li>
+            <li>Java</li>
+            <li>Firebase</li>
+            <li>Cloud Messaging</li>
+            <li>Push Notification</li>
+            <li>Distance API</li>
+          </ul>
+          <div class="images">
+            <div><img src="./assets/img/exclusave/1.png"></div>
+            <div><img src="./assets/img/exclusave/2.png"></div>
+            <div><img src="./assets/img/exclusave/3.png"></div>
+            <div><img src="./assets/img/exclusave/4.png"></div>
+            <div><img src="./assets/img/exclusave/5.png"></div>
+            <div><img src="./assets/img/exclusave/6.png"></div>
+            <div><img src="./assets/img/exclusave/7.png"></div>
+            <div><img src="./assets/img/exclusave/8.png"></div>
+            <div><img src="./assets/img/exclusave/9.png"></div>
+        </div>
+          </div>
+        </div>
+    </section>
+
+      <section class="panel essentials">
+          <div class="valign-wrapper">
+          <div class="palabit-container reveal">
+            <img src="./assets/img/essentials.png" width="100px" class="logo">
+            <h2>Ragnarok M: Essentials</h2>
+            <p>02.06.2019</p>
+            <ul>
+              <li>Android Studio</li>
+              <li>Java</li>
+              <li>Firebase</li>
+              <li>Push Notification</li>
+            </ul>
+            <div class="images">
+              <div><img src="./assets/img/essentials/1.jpg"></div>
+              <div><img src="./assets/img/essentials/2.jpg"></div>
+              <div><img src="./assets/img/essentials/3.jpg"></div>
+              <div><img src="./assets/img/essentials/4.jpg"></div>
+              <div><img src="./assets/img/essentials/5.jpg"></div>
+              <div><img src="./assets/img/essentials/6.jpg"></div>
+              <div><img src="./assets/img/essentials/7.jpg"></div>
+              <div><img src="./assets/img/essentials/8.jpg"></div>
+              <div><img src="./assets/img/essentials/9.jpg"></div>
+              <div><img src="./assets/img/essentials/10.jpg"></div>
+              <div><img src="./assets/img/essentials/11.jpg"></div>
+              <div><img src="./assets/img/essentials/12.jpg"></div>
+              <div><img src="./assets/img/essentials/13.jpg"></div>
+          </div>
+            </div>
+          </div>
+      </section>
+
+      <section class="panel contact reveal" id="contact">
+        <div class="valign-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m6">
+            <h4>GET IN TOUCH</h4>
+            <ul class="info">
+              <li><ion-icon name="mail-outline"></ion-icon>lloydalemania@gmail.com</a></li>
+              <li><ion-icon name="call-outline"></ion-icon>+63 999 406 1062</li>
+              <li><ion-icon name="map-outline"></ion-icon>Purok 2, Bagasbas, Daet, Camarines Norte 4600</li>
+            </ul>
+            </div>
+            <div class="col s12 m6">
+          <div class='form'>
+            <h4>SAY SOMETHING</h4>
+            <form id="form1" class='row' name='contact-form' action="mailto:lloydalemania@gmail.com" method="post" enctype="text/plain">
+             <div class='input-field col s12'>
+              <input class='contact-form-name validate' id='name' name='name' required='required' type='text' value=''/>
+              <label for='name'>Full Name*</label>
+              </div>
+             <div class='input-field col s12'>
+              <input class='contact-form-email validate' id='email' name='email' required='required' type='email' value=''/>
+              <label for='email'>Email Address*</label>
+              </div>
+             <div class='input-field col s12'>
+              <textarea class='validate contact-form-email-message materialize-textarea' id='msg' name='email-message' required='required' rows='5' type='text'></textarea>
+              <label for='msg'>Message*</label>
+              </div>
+              <button type="submit" form="form1" class='col s12 waves-effect waves-light btn' type='button'>Send</button>
+        </form>
+        </div>
+            </div>
+          </div>
+
+          <div class="row credits">
+            <div class="col s12 m6">
+            <ul id="socmed">
+            <li><a href="https://www.facebook.com/alemanialloyd" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://www.twitter.com/alemanialloyd" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.linkedin.com/in/alemanialloyd" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          </ul>
+        </div>
+        <div class="col s12 m6">
+          <p>Designed and Developed by Lloyd Alemania <ion-icon name="heart-outline"></ion-icon></p>
+          </div>
+        </div>
+            </div>
+            </div>
+      </section>
+    </div>
+
+    <script>
+$(window).on('beforeunload', function(){
+  $(window).scrollTop(0);
+});
+
+      $(function () {
+$('.images').slick({
+        arrows: false,
+  centerMode: true,
+  centerPadding: '100px',
+  slidesToShow: 4,
+  focusOnSelect: true,
+  draggable: false,
+  responsive: [
+  {
+      breakpoint: 1024,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        draggable: true
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1,
+        draggable: true
+      }
+    }
+  ]
+});
+
+    });
+
+    (function($) {
+    
+    jQuery.scrollSpeed = function(step, speed, easing) {
+        
+        var $document = $(document),
+            $window = $(window),
+            $body = $('html, body'),
+            option = easing || 'default',
+            root = 0,
+            scroll = false,
+            scrollY,
+            scrollX,
+            view;
+            
+        if (window.navigator.msPointerEnabled)
+        
+            return false;
+            
+        $window.on('mousewheel DOMMouseScroll', function(e) {
+            
+            var deltaY = e.originalEvent.wheelDeltaY,
+                detail = e.originalEvent.detail;
+                scrollY = $document.height() > $window.height();
+                scrollX = $document.width() > $window.width();
+                scroll = true;
+            
+            if (scrollY) {
+                
+                view = $window.height();
+                    
+                if (deltaY < 0 || detail > 0)
+            
+                    root = (root + view) >= $document.height() ? root : root += step;
+                
+                if (deltaY > 0 || detail < 0)
+            
+                    root = root <= 0 ? 0 : root -= step;
+                
+                $body.stop().animate({
+            
+                    scrollTop: root
+                
+                }, speed, option, function() {
+            
+                    scroll = false;
+                
+                });
+            }
+            
+            if (scrollX) {
+                
+                view = $window.width();
+                    
+                if (deltaY < 0 || detail > 0)
+            
+                    root = (root + view) >= $document.width() ? root : root += step;
+                
+                if (deltaY > 0 || detail < 0)
+            
+                    root = root <= 0 ? 0 : root -= step;
+                
+                $body.stop().animate({
+            
+                    scrollLeft: root
+                
+                }, speed, option, function() {
+            
+                    scroll = false;
+                
+                });
+            }
+            
+            return false;
+            
+        }).on('scroll', function() {
+            
+            if (scrollY && !scroll) root = $window.scrollTop();
+            if (scrollX && !scroll) root = $window.scrollLeft();
+            
+        }).on('resize', function() {
+            
+            if (scrollY && !scroll) view = $window.height();
+            if (scrollX && !scroll) view = $window.width();
+            
+        });       
+    };
+    
+    jQuery.easing.default = function (x,t,b,c,d) {
+    
+        return -c * ((t=t/d-1)*t*t*t - 1) + b;
+    };
+    
+})(jQuery);
+
+
+
+    // Custom Easing
+    jQuery.scrollSpeed($(window).height(), 500, 'easeOutCubic');
+
+    ScrollReveal().reveal('.reveal');
+    </script>
+  </body>
+</html> 
