@@ -276,6 +276,7 @@ ul.info li ion-icon {
   margin: 2rem 0 0;
   color: white;
   line-height: 42px;
+  text-align: right;
 }
 
 .slick-arrow {
