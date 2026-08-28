@@ -34,4 +34,28 @@ export const experience: WorkExperience[] = [
       "Adapted teaching strategies to help learners understand complex concepts, particularly in Mathematics.",
     ],
   },
+  {
+    company: "Freelance",
+    title: "Freelance Software Developer",
+    startDate: "2019-02",
+    endDate: "2023-06",
+    highlights: [
+      "Developed and delivered mobile and web applications for businesses, organizations, and events, working independently from requirements gathering through deployment.",
+      "Built queuing and reservation systems, event tabulation platforms, and government document tracking systems.",
+      "Delivered personnel management systems, e-commerce and delivery applications, and gaming utilities.",
+      "Worked directly with clients to gather requirements and design practical, tailored solutions.",
+      "Implemented real-time data, authentication, and notification features across projects.",
+      "Built payment/order workflows, document generation, and third-party API integrations.",
+    ],
+    stack: [
+      "React Native",
+      "React",
+      "Flutter",
+      "Android (Native)",
+      "Firebase",
+      "MySQL",
+      "Docker",
+      "REST API",
+    ],
+  },
 ];
